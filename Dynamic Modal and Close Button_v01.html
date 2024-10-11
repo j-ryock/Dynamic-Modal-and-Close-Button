@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="createModalBtn">Create Modal</button>
+
+    <div id="modalDiv" style="display: none;">
+        <p>Mutiny brig red ensign <a href="https://google.com" target="_blank">Google</a> jack bilge grog blossom fathom skysail topgallant pressgang. Scourge of the seven seas bilge rat Plate Fleet marooned hempen halter topmast chandler capstan grog clipper. Dead men tell no tales sloop quarterdeck coxswain rutters Spanish Main rope's end hornswaggle yard chase. Arr splice the main brace grog blossom bilged on her anchor dance the hempen jig Yellow Jack execution dock spike trysail nipperkin. Boom lanyard Admiral of the Black gangway pillage clipper Buccaneer weigh anchor chase guns galleon.</p>
+        <p>Keelhaul cutlass plunder tackle deadlights lass trysail case shot Sea Legs Privateer. Six pounders maroon bucko shrouds plunder strike colors Jack Tar stern crimp no prey, no pay. Lanyard scuppers ballast crack Jennys tea cup lateen sail execution dock sutler chase overhaul gun. Spanker lateen sail splice the main brace Corsair topgallant holystone handsomely broadside ye boatswain. Gunwalls long clothes Arr barque spyglass salmagundi hang the jib warp knave matey.</p>
+        <p>Parley careen chase Spanish Main Arr killick hands hardtack hulk skysail. Jolly Roger wench bilge brigantine crimp jack yo-ho-ho Corsair tack hardtack. Trysail run a shot across the bow furl topgallant doubloon hogshead stern gibbet draft schooner. Fire ship flogging holystone nipperkin Sail ho hulk knave fluke lugsail ye. Chase main sheet Spanish Main chantey ballast dance the hempen jig furl blow the man down jib Brethren of the Coast.</p>
+        <p>Chase guns red ensign scurvy Gold Road splice the main brace hearties ye American Main cable lateen sail. Pirate Round careen gally port quarterdeck run a rig matey flogging mizzen topsail. Sink me skysail man-of-war loot no prey, no pay scuttle squiffy gunwalls clap of thunder American Main. Topmast doubloon take a caulk hail-shot league snow blow the man down Pieces of Eight holystone gunwalls. Skysail spanker bilge rat pirate to go on account ye Jack Ketch tackle dance the hempen jig tender.</p>
+        <p>Brigantine red ensign pinnace stern mizzen hornswaggle scourge of the seven seas provost grog jib. Scuppers salmagundi deadlights capstan rigging ahoy no prey, no pay Privateer boom bilge rat. Skysail Corsair mizzenmast clipper hearties American Main keelhaul mizzen plunder measured fer yer chains. Cable poop deck hulk parley blow the man down Cat o'nine tails fore come about ballast marooned. Parrel grapple starboard warp Shiver me timbers scuttle scallywag list aye jolly boat.</p>
+        <p>Hardtack careen carouser Davy Jones' Locker galleon jolly boat case shot maroon Gold Road brigantine. Yo-ho-ho Letter of Marque galleon boom fluke dance the hempen jig landlubber or just lubber haul wind loaded to the gunwalls heave to. Pirate parley rum topmast killick long clothes no prey, no pay spike measured fer yer chains lanyard. Chase doubloon reef interloper heave down Sea Legs gally chandler schooner furl. Overhaul ballast bilged on her anchor interloper chantey bilge water no prey, no pay doubloon matey mizzen.</p>
+        <p>Heave to chase guns pink come about ye code of conduct aft jack rum marooned. Overhaul topsail line lee loaded to the gunwalls boom come about chandler crimp Corsair. Reef Sail ho Pieces of Eight strike colors splice the main brace long boat lanyard hornswaggle sutler transom. Quarterdeck jolly boat scourge of the seven seas draft holystone chase guns gangway weigh anchor long clothes pink. Ahoy loot lugsail Privateer lanyard chantey Davy Jones' Locker code of conduct Sink me gally.</p>
+        <p>Boom league Arr wench spyglass Pirate Round hogshead chandler heave to chase guns. American Main jolly boat avast hearties walk the plank rum lugger keel Davy Jones' Locker Corsair. Sloop tack killick Blimey yardarm scourge of the seven seas Letter of Marque bounty Chain Shot hempen halter. Poop deck Sail ho run a rig scuttle holystone carouser overhaul spyglass draught long clothes. Man-of-war gangplank cable long clothes hands lateen sail ho doubloon Plate Fleet bounty.</p>
+        <p>Cackle fruit log gabion me tack Blimey reef sails man-of-war Arr piracy. Pirate Round snow long boat aft topmast mizzenmast line driver chase guns jolly boat. Weigh anchor aft man-of-war crimp hands hogshead mizzenmast broadside plunder gangway. Transom cog prow grog blossom fire in the hole gangway bilge rat mutiny reef run a shot across the bow. Aft cog lanyard Chain Shot ye spike flogging coffer hearties jib.</p>
+        <p>Brigantine tackle chantey pink splice the main brace execution dock yawl fore hempen halter Privateer. Skysail aft salmagundi lass matey keelhaul furl mizzen black spot Cat o'nine tails. Yo-ho-ho bucko gally rigging hornswaggle cutlass deadlights Spanish Main lad bowsprit. Yardarm nipperkin dead men tell no tales come about overhaul league spirits gaff stern Letter of Marque. Log Plate Fleet code of conduct yawl Pieces of Eight rum brig sloop bucko holystone.</p>
+    </div>
+
+<script>
+const createModalBtn = document.querySelector('#createModalBtn');
+const modalDiv = document.querySelector('#modalDiv');
+
+// CREATE MODAL
+var modal = document.createElement('div');
+modal.style.position='fixed';
+modal.style.top='10%';
+modal.style.left='10%';
+modal.style.width='80%';
+modal.style.height='80%';
+modal.style.backgroundColor='white';
+modal.style.padding='20px';
+modal.style.boxShadow='0 0 10px rgba(0,0,0,0.5)';
+modal.style.zIndex='10000';
+modal.style.overflowY='auto';
+// modal.style.overflowY='none';
+
+// CREATE modalContent
+var modalContent = document.createElement('div');
+modalContent.innerHTML = modalDiv.innerHTML;
+
+// CREATE CLOSE BTN
+var closeBtn = document.createElement('div');
+closeBtn.innerText='X';
+closeBtn.style.fontFamily = 'arial';
+closeBtn.style.fontSize = '24pt';
+closeBtn.style.color = '#012169';
+closeBtn.style.cursor = 'pointer';
+closeBtn.style.position = 'absolute';
+closeBtn.style.top = '5px'; 
+closeBtn.style.right = '5px';
+
+// ------------------------------------------------//
+
+// APPEND modalContent AND closeBtn TO MODAL
+modal.appendChild(modalContent);
+modal.appendChild(closeBtn); 
+
+// ------------------------------------------------//
+
+// ADD MODAL TO BODY FUNCTION
+createModalBtn.addEventListener ('click',function(){
+  document.body.appendChild(modal);
+});
+
+//CLOSE MODAL FUNCTION
+closeBtn.addEventListener ('click', function() {
+    modal.remove();
+});
+
+</script>
+</body>
+</html>
